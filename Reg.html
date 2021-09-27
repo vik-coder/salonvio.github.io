@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Registration</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Img/Spa.png" />
+    <link rel="stylesheet" href="reg.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+        <div class="form">
+
+
+            <form class="registration-form" action="connect.php" method="post">
+                <h2 data-lang="register_modal_heading" class="centered-modal__heading centered-modal__heading--sm-margin h3">Register with SALONVIO</h2>
+
+                <input type="text" placeholder="Name" name="UserName" />
+                <input type="text" placeholder="Password" name="Password" />
+                <input type="text" name="country code" placeholder="Country Code" value="+91" size="2">
+                <input type="text" placeholder="City" name="City" />
+                <input type="text" placeholder="Email" name="Email" />
+
+                <button>Create</button>
+                <p class="message">Already Registered? <a href="#"><span></span> Login</a> </p>
+
+            </form>
+            <form class="login-form">
+                <h2 data-lang="register_modal_heading" class="centered-modal__heading centered-modal__heading--sm-margin h3">Welcome Back! Sign In</h2>
+                <input type="text" placeholder="Email" _blank="Enter" />
+                <input type="text" placeholder="Password" />
+                <button>Login</button>
+                <p class="message">Not Registered? <a href="#">SignUp</a> </p>
+            </form>
+
+        </div>
+
+    </div>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script>
+        $('.message a').click(function() {
+            $('form').animate({
+                height: "toggle",
+                opacity: "toggle"
+            }, "slow");
+        });
+    </script>
+
+</body>
+
+</html>
